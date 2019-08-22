@@ -32,4 +32,21 @@ server.get('/api/users', async (req, res) => {
   }
 });
 
+server.post('/api/login', async (req, res) => {
+  const { name, password } = req.body;
+
+  try {
+    const user = await User.findBy({ name }).first();
+
+    if (user && bcrypt.compareSync(password, user.password)) {
+      res.status(200).json({...user, message: `Welcome ${user.name}`});
+    } else {
+      res.status(401).json({message: "Invalid credentials"});
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({message: "Error logging in"});
+  }
+});
+
 module.exports = server;
