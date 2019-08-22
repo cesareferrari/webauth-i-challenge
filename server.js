@@ -2,6 +2,7 @@ const express = require('express');
 const server = express();
 const bcrypt = require('bcryptjs');
 const User = require('./models/user.js');
+const validate = require('./auth/validate.js');
 
 server.use(express.json());
 
@@ -23,7 +24,7 @@ server.post('/api/register', async (req, res) => {
   }
 });
 
-server.get('/api/users', async (req, res) => {
+server.get('/api/users', validate, async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
