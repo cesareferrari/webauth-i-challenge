@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cesareferrari/webauth-i-challenge#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "knex": "^0.19.2",
     "nodemon": "^1.19.1",

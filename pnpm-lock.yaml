@@ -1,4 +1,5 @@
 dependencies:
+  bcryptjs: 2.4.3
   express: 4.17.1
   knex: 0.19.2
   nodemon: 1.19.1
@@ -176,6 +177,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
+  /bcryptjs/2.4.3:
+    dev: false
+    resolution:
+      integrity: sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   /binary-extensions/1.13.1:
     dev: false
     engines:
@@ -2725,6 +2730,7 @@ packages:
     resolution:
       integrity: sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
 specifiers:
+  bcryptjs: ^2.4.3
   express: ^4.17.1
   knex: ^0.19.2
   nodemon: ^1.19.1

@@ -1,5 +1,6 @@
 const express = require('express');
 const server = express();
+const bcrypt = require('bcryptjs');
 const User = require('./models/user.js');
 
 server.use(express.json());
@@ -10,6 +11,8 @@ server.get('/', (req, res) => {
 
 server.post('/api/register', async (req, res) => {
   const userData = req.body;
+  const hash = bcrypt.hashSync(userData.password, 10);
+  userData.password = hash;
 
   try {
     const user = await User.add(userData);
