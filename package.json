@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/cesareferrari/webauth-i-challenge/issues"
   },
-  "homepage": "https://github.com/cesareferrari/webauth-i-challenge#readme"
+  "homepage": "https://github.com/cesareferrari/webauth-i-challenge#readme",
+  "dependencies": {
+    "knex": "^0.19.2",
+    "sqlite3": "^4.1.0"
+  }
 }
