@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const sessionStore = require('connect-session-knex')(session);
 const server = express();
 const bcrypt = require('bcryptjs');
 
@@ -15,7 +16,14 @@ const sessionOptions = {
     httpOnly: true
   },
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: new sessionStore({
+    knex: require('./data/db-config.js'),
+    tablename: 'sessions',
+    sidfieldname: 'sid',
+    createtable: true,
+    clearInterval: 1000 * 60 * 60
+  })
 }
 
 server.use(express.json());
