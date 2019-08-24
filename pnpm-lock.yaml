@@ -1,5 +1,6 @@
 dependencies:
   bcryptjs: 2.4.3
+  connect-session-knex: 1.4.0
   express: 4.17.1
   express-session: 1.16.2
   knex: 0.19.2
@@ -400,6 +401,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-vtv5HtGjcYUgFrXc6Kx747B83MRRVS5R1VTEQoXvuP+kMI+if6uywV0nDGoiydJRy4yk7h9od5Og0kxx4zUXmw==
+  /connect-session-knex/1.4.0:
+    dev: false
+    engines:
+      node: '>=4.3.2'
+    resolution:
+      integrity: sha512-TjBESV6CY/SC4SRQP0hsYBLfR20bmj370+T+YpYgiC3kgOgL5x8z0bDgFddnUFZS//rgj+5Ps7pPQeP0ANq55w==
   /console-control-strings/1.1.0:
     dev: false
     resolution:
@@ -2779,6 +2786,7 @@ packages:
       integrity: sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
 specifiers:
   bcryptjs: ^2.4.3
+  connect-session-knex: ^1.4.0
   express: ^4.17.1
   express-session: ^1.16.2
   knex: ^0.19.2
